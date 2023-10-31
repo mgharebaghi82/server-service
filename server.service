@@ -1,0 +1,13 @@
+[Unit]
+Description=Relay Service
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+ExecStart=/home/server/target/release/server
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
